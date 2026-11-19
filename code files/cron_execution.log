@@ -1,0 +1,15 @@
+[2026-11-07 20:15:18] Job started
+[2026-11-07 20:15:18] SUCCESS: latest orders saved to /home/ehtasham-arif/cron-task/orders_report.txt (attempt 1)
+[2026-11-07 20:17:01] Job started
+[2026-11-07 20:17:01] SUCCESS: latest orders saved to /home/ehtasham-arif/cron-task/orders_report.txt (attempt 1)
+[2026-11-07 20:18:01] Job started
+[2026-11-07 20:18:01] SUCCESS: latest orders saved to /home/ehtasham-arif/cron-task/orders_report.txt (attempt 1)
+[2026-11-07 20:19:01] Job started
+[2026-11-07 20:19:01] SUCCESS: latest orders saved to /home/ehtasham-arif/cron-task/orders_report.txt (attempt 1)
+[2026-11-07 20:20:52] Job started
+[2026-11-07 20:20:52] WARNING: attempt 1/3 failed: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+[2026-11-07 20:21:02] WARNING: attempt 2/3 failed: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+[2026-11-07 20:21:12] WARNING: attempt 3/3 failed: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+[2026-11-07 20:21:12] ERROR: database unavailable after 3 attempts. No report written.
+[2026-11-07 20:21:29] Job started
+[2026-11-07 20:21:29] SUCCESS: latest orders saved to /home/ehtasham-arif/cron-task/orders_report.txt (attempt 1)
