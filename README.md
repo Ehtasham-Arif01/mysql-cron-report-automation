@@ -1,12 +1,26 @@
-# Cron Job: Automated MySQL Orders Report
+# MySQL Cron Report Automation
 
-DevOps assignment (**23P-0567**). A Bash script, run by `cron`, fetches the latest orders from a MySQL database and appends them to a report file. Every run is logged with a timestamp. If the database is down, the script retries before giving up.
+![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnubash&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
+![Cron](https://img.shields.io/badge/Scheduler-cron-blue)
+
+A Bash script, scheduled with `cron`, that pulls the latest orders from a MySQL database and appends them to a report file. Every run is logged with a timestamp. If the database is down, the script retries before giving up.
+
+## Features
+
+- **Scheduled with cron.** Runs on its own at any interval you set.
+- **Retries on failure.** Tries 3 times, 10 seconds apart, if MySQL can't be reached.
+- **Timestamped logs.** Records every start, success, warning and error.
+- **Keeps the password off the command line.** Reads it from a `--defaults-extra-file`, so it never shows up in `ps`.
+- **Read-only database user.** The user can only run `SELECT` on the `orders` table.
+- **Works under cron.** Sets its own `PATH` and finds its files relative to the script, so cron's minimal environment doesn't break it.
 
 ## Repository Structure
 
 ```
 .
-├── Cron_Job_Report.pdf        # Full write-up with screenshots
+├── Cron_Job_Report.pdf        # Detailed write-up with screenshots
 └── code files/
     ├── fetch_orders.sh        # Main script run by cron
     ├── setup_db.sql           # Creates DB, orders table, sample data, read-only user
@@ -62,3 +76,14 @@ The script sets its own `PATH` and resolves every file relative to its own locat
 ## Note on Credentials
 
 `db.cnf` holds demo credentials for a local, `SELECT`-only user created by `setup_db.sql`. Use your own credentials for anything real, and keep that file out of version control.
+
+## What I Learned
+
+- How to write cron schedules, and how cron's minimal environment differs from an interactive shell
+- How to write Bash scripts that handle errors, retry and use exit codes
+- Safer ways to pass MySQL credentials and grant a user only the access it needs
+- How to keep logs that make problems in automated jobs easy to trace
+
+## Author
+
+**Ehtasham Arif**: DevOps learner · [GitHub](https://github.com/Ehtasham-Arif01)
