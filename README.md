@@ -87,3 +87,7 @@ The script sets its own `PATH` and resolves every file relative to its own locat
 ## Author
 
 **Ehtasham Arif**: DevOps learner · [GitHub](https://github.com/Ehtasham-Arif01)
+
+## License
+
+Released under the [MIT License](LICENSE).
